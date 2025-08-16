@@ -1,3 +1,5 @@
+// Note: Don't import Node-only modules in browser scripts.
+
 const inputSlider = document.querySelector("[data-lengthSlider]");
 const lengthDisplay = document.querySelector("[data-lengthContainer]");
 const passwordDisplay = document.querySelector("[data-PasswordDisplay]");
@@ -14,7 +16,7 @@ const symbol = '~`!@#$%^&*()_+-={[}]|:;"<,>.?/';
 
 let password = "";
 let passwordLength = 10;
-let checkCount = 1;
+let checkCount = 0;
 handleSlider();
 // set strength circle to grey
 setIndicator("#ccc")
